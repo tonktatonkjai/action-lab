@@ -34,4 +34,4 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: check curl
-        run: TTP_RESULT=$(curl -i localhost:80 2>/dev/null |grep HTTP|awk '{print $2}' ); if [ "$HTTP_RESULT" = '200' ];then echo "deployed successful"; else echo "deployed failed";fi
+        run: TTP_RESULT=$(curl -i localhost:80 2>/dev/null |grep HTTP|awk '{print $2}' ); if [ "$HTTP_RESULT" = '200' ];then echo "deployed successful";exit 0; else echo "deployed failed";exit 255;fi
