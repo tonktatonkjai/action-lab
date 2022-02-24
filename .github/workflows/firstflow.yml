@@ -28,7 +28,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: deploy app with docker
-        run: docker run -d --rm myapp -p 80:80
+        run: docker run -d -p 80:80 myapp 
   check:
     needs: deploy
     runs-on: self-hosted
