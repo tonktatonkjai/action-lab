@@ -4,7 +4,7 @@ metadata:
   name: hw-svc
 spec:
   selector:
-    app: homework
+    app: {{ .Values.labels.name }}
   ports:
     - protocol: TCP
       port: 80
