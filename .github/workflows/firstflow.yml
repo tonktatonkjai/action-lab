@@ -44,8 +44,11 @@ jobs:
     needs: deploy
     runs-on: self-hosted
     steps:
+      - name: check helm
+        run: helm list -n test
       - name: check pod
         run: kubectl get po -n test
+
 
           # - name: deploy deployment
           #run: kubectl apply -f hw-deploy.yml -n homework
