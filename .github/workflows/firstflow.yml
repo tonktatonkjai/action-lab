@@ -28,7 +28,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: deploy app with docker
-        run: docker run -d -p 80:80 myhomework 
+        run: kubectl apply -f hw-deploy.yml 
   check:
     needs: deploy
     runs-on: self-hosted
