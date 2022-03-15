@@ -5,7 +5,7 @@ metadata:
   labels:
     app: homework
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: homework
@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: homework
-        image: "homeimage:1.0.0"
+        image: "myhomework:latest"
         ports:
         - containerPort: 80
