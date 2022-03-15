@@ -27,6 +27,8 @@ jobs:
     needs: build
     runs-on: self-hosted
     steps:
+      - name: check images
+        run: docker images
       - name: deploy with k8s
         run: kubectl apply -f hw-deploy.yml -n homework
       - name: create svc
