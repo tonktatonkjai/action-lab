@@ -27,8 +27,11 @@ jobs:
     needs: build
     runs-on: self-hosted
     steps:
-      - name: deploy app with k8s
-        run: kubectl apply -f hw-deploy.yml -n homework 
+      - name: deploy with k8s
+        run: kubectl apply -f hw-deploy.yml -n homework
+      - name: create svc
+        run: kubectl apply -f hw-svc.yml -n homework
+
   check:
     needs: deploy
     runs-on: self-hosted
