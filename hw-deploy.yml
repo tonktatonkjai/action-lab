@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: homework
-        image: myhomework:latest
+        image: tonktawork
         ports:
         - containerPort: 80
