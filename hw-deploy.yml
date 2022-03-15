@@ -17,5 +17,6 @@ spec:
       containers:
       - name: homework
         image: tonktawork
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
