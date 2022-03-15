@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hw-svc
+spec:
+  selector:
+    app: homework
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

@@ -1,0 +1,7 @@
+namespace: homework
+image: tonktatonkjai/tonk-registry
+tag: 1.0.0
+replicas: 1
+labels:
+  app: homework
+
