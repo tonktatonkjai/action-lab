@@ -39,7 +39,7 @@ jobs:
       - name: check images
         run: docker images
       - name: helm install
-        run: helm upgrade -i tonktawork -f helm/values.yaml helm/ -n test
+        run: helm upgrade -i --create-namespace --atomic --wait --namespace test tonktawork -f helm/values.yaml helm/
   check:
     needs: deploy
     runs-on: self-hosted
