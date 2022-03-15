@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: homework
-        image: homework
+        image: "homeimage:1.0.0"
         ports:
         - containerPort: 80
