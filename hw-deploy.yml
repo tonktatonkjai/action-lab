@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: homework
-        image: tonktawork
+        image: "tonktatonkjai/tonk-registry:1.0.0"
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
