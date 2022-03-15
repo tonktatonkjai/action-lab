@@ -27,7 +27,7 @@ jobs:
     needs: build
     runs-on: self-hosted
     steps:
-      - name: deploy app with docker
+      - name: deploy app with k8s
         run: kubectl apply -f hw-deploy.yml 
   check:
     needs: deploy
