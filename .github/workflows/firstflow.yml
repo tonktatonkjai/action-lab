@@ -17,9 +17,20 @@ on:
         description: 'tag'
         required: true
       tag2:
-        description: 'use'
+        description: 'true'
         type: boolean
         required: false
+      tag3:
+        description: 'env'
+        type: environment
+        required: true
+      tag4:
+        description: 'dropdown'
+        type: choice
+        required: true
+        options:
+        - true
+        - false
      
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
